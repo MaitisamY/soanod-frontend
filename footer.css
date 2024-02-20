@@ -110,10 +110,12 @@ footer .section-2 .links-container {
     height: auto;
     background: none;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
-    gap: 10px;
-    padding: 0 2rem;
+    justify-content: start;
+    align-items: start;
+    gap: 25px;
+    padding: 0 1rem;
     margin: 0;
     box-sizing: border-box;
 }
