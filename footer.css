@@ -115,7 +115,7 @@ footer .section-2 .links-container {
     justify-content: start;
     align-items: start;
     gap: 25px;
-    padding: 0 1rem;
+    padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
