@@ -156,14 +156,10 @@ header .section-2 div select {
     border: none;
     background: none;
     outline: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    gap: 5px;
+    text-transform: uppercase;
 }
 
-header .section-2 div .select:hover {
+header .section-2 div select:hover {
     background-color: #323546;
 }
 
