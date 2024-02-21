@@ -226,7 +226,7 @@ main .section-2 .configuration-container {
     color: white;
     border: none;
     outline: none;
-    padding: 8px 12px;
+    padding: 10px 10px;
     margin: 0;
     cursor: pointer;
     border-radius: 6px;
@@ -267,7 +267,7 @@ main .section-2 .configuration-container {
 .data-table-searcher {
     background-color: #222531;
     color: #9aa0b1;
-    padding: 12px 12px;
+    padding: 11px 10px;
     margin: 0;
     border-radius: 6px;
     border: none;
@@ -280,7 +280,15 @@ main .section-2 .configuration-container {
     color: #9aa0b1;
 }
 
-main .section-2 table {
+main .section-2 .coins-data-table-wrapper {
+    width: 100%;
+    height: auto;
+    overflow-x: auto;
+    white-space: nowrap;
+    margin: 0;
+}
+
+main .section-2 .coins-data-table-wrapper table {
     width: 100%;
     height: auto;
     background: none;
@@ -291,25 +299,33 @@ main .section-2 table {
     border-spacing: 0;
 }
 
-main .section-2 table tr {
+.sticky-columns th:nth-child(-n+2),
+.sticky-columns td:nth-child(-n+2) {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    background-color: #0D1421;
+}
+
+main .section-2 .coins-data-table-wrapper table tr {
     width: 100%;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-main .section-2 table tr a {
+main .section-2 .coins-data-table-wrapper table tr a {
     text-decoration: none;
     cursor: pointer;
 }
 
-main .section-2 table tr a:hover {
+main .section-2 .coins-data-table-wrapper table tr a:hover {
     background-color: #222531;
 }
 
-main .section-2 table tr:last-child {
+main .section-2 .coins-data-table-wrapper table tr:last-child {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-main .section-2 table th {
+main .section-2 .coins-data-table-wrapper table th {
     padding: 12px;
     margin: 0;
     color: white;
@@ -317,7 +333,7 @@ main .section-2 table th {
     font-weight: 600;
 }
 
-main .section-2 table td {
+main .section-2 .coins-data-table-wrapper table td {
     padding: 20px 12px;
     margin: 0;
     color: white;
@@ -325,21 +341,26 @@ main .section-2 table td {
     font-weight: 600;
 }
 
-main .section-2 table td i {
+main .section-2 .coins-data-table-wrapper table td span {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+main .section-2 .coins-data-table-wrapper table td i {
     font-size: 14px;
     font-weight: 600;
     font-style: normal;
 }
 
-main .section-2 table td i.danger {
+main .section-2 .coins-data-table-wrapper table td span.danger {
     color: #ff0000;
 }
 
-main .section-2 table td i.success {
+main .section-2 .coins-data-table-wrapper table td span.success {
     color: #16C784;
 }
 
-main .section-2 table td a {
+main .section-2 .coins-data-table-wrapper table td a {
     text-decoration: none;
     color: white;
     cursor: pointer;
@@ -393,4 +414,15 @@ main .section-2 .navigation-container button:disabled:hover,
 main .section-2 .navigation-container button:disabled:focus {
     background-color: transparent;
     color: #9aa0b1;
+}
+
+@media screen and (max-width: 991px) {
+    .rows-selector {
+        width: 100%;
+        gap: 1px;
+    }
+
+    .data-table-searcher {
+        width: 100%;
+    }
 }
