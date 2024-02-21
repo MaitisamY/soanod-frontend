@@ -51,3 +51,24 @@ const menuToggler = document.getElementById('responsive-toggler');
 menuToggler.addEventListener('click', () => {
     menu.classList.toggle('active')
 })
+
+// Table sticky columns
+
+window.addEventListener('DOMContentLoaded', function () {
+    // Check the screen width and add/remove the sticky-columns class accordingly
+    function handleStickyColumns() {
+      var table = document.getElementById('coins-data-table');
+      var minWidth = 992; // Minimum width for sticky columns
+  
+      if (window.innerWidth < minWidth) {
+        table.classList.add('sticky-columns');
+      } else {
+        table.classList.remove('sticky-columns');
+      }
+    }
+  
+    handleStickyColumns();
+    window.addEventListener('resize', handleStickyColumns);
+});
+  
+  
