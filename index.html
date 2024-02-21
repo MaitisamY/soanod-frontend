@@ -62,9 +62,13 @@
         <!-- Section 2 -->
         <div class="section-2">
             <div>
-                <button class="common-btn">
-                    English <span class="triangle-down"></span>
-                </button>
+                <select name="language" id="language">
+                    <option value="USD" selected>ENG</option>
+                    <option value="USD">FRE</option>
+                    <option value="USD">ARB</option>
+                    <option value="USD">AFR</option>
+                    <option value="USD">SPA</option>
+                </select>
                 <select name="currency" id="currency">
                     <option value="USD" selected>USD</option>
                     <option value="USD">USD</option>
@@ -355,44 +359,51 @@
                 </a>
                 <input class="data-table-searcher" type="text" placeholder="Search term...">
             </div>
-            <table>
-                <thead style="overflow-x: auto;">
-                    <tr>
-                        <th class="text-center">#</th>
-                        <th class="text-left">Name</th>
-                        <th class="text-right">Price</th>
-                        <th class="text-right">Market Cap</th>
-                        <th class="text-right">Liquidity</th>
-                        <th class="text-right">Volume (24h)</th>
-                        <th class="text-right">Change (1h)</th>
-                        <th class="text-right">Change (24h)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="text-center">1</td>
-                        <td class="text-left"><a href="#">Bitcoin</a></td>
-                        <td class="text-right">$1,000</td>
-                        <td class="text-right">$1,000</td>
-                        <td class="text-right">$1,000</td>
-                        <td class="text-right">$1,000</td>
-                        <td class="text-right">$1,000</td>
-                        <td class="text-right">$1,000</td>
-                    </tr>
-                    <tr>
-                        <a href="#">
-                            <td class="text-center">2</td>
-                            <td class="text-left"><a href="#">Ethereum</a></td>
+
+            <div class="coins-data-table-wrapper">
+                <table id="coins-data-table">
+                    <thead>
+                        <tr>
+                            <th class="text-center">#</th>
+                            <th class="text-left">Name</th>
+                            <th class="text-right">Price</th>
+                            <th class="text-right">Market Cap</th>
+                            <th class="text-right">Liquidity</th>
+                            <th class="text-right">Volume (24h)</th>
+                            <th class="text-right">Change (1h)</th>
+                            <th class="text-right">Change (24h)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-center">1</td>
+                            <td class="text-left"><a href="#">Bitcoin</a></td>
+                            <td class="text-right">
+                                <span class="danger"><i class="fas fa-caret-down"></i> $1,000</span>
+                            </td>
                             <td class="text-right">$1,000</td>
                             <td class="text-right">$1,000</td>
                             <td class="text-right">$1,000</td>
                             <td class="text-right">$1,000</td>
                             <td class="text-right">$1,000</td>
-                            <td class="text-right">$1,000</td>
-                        </a>
-                    </tr>
-                </tbody>
-            </table>
+                        </tr>
+                        <tr>
+                            <a href="#">
+                                <td class="text-center">2</td>
+                                <td class="text-left"><a href="#">Ethereum</a></td>
+                                <td class="text-right">
+                                    <span class="success"><i class="fas fa-caret-down"></i> $1,000</span>
+                                </td>
+                                <td class="text-right">$1,000</td>
+                                <td class="text-right">$1,000</td>
+                                <td class="text-right">$1,000</td>
+                                <td class="text-right">$1,000</td>
+                                <td class="text-right">$1,000</td>
+                            </a>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
             <div class="navigation-container">
                 <button disabled><i class="fas fa-chevron-left"></i></button>
@@ -459,5 +470,4 @@
 </body>
 </html>
 
-<!--https://s2.coinmarketcap.com/static/cloud/img/newsletter_bg_dark.svg?_=8581051-->
 
