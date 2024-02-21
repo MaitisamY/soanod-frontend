@@ -43,8 +43,8 @@ btn.addEventListener('click', function(e) {
     });
 });
 
-// Toggle responsive menu
 
+// Toggle responsive menu
 const menu = document.getElementById('responsive-menu');
 const menuToggler = document.getElementById('responsive-toggler');
 
@@ -52,13 +52,13 @@ menuToggler.addEventListener('click', () => {
     menu.classList.toggle('active')
 })
 
-// Table sticky columns
 
+// Table sticky columns
 window.addEventListener('DOMContentLoaded', function () {
     // Check the screen width and add/remove the sticky-columns class accordingly
     function handleStickyColumns() {
       var table = document.getElementById('coins-data-table');
-      var minWidth = 992; // Minimum width for sticky columns
+      var minWidth = 992; 
   
       if (window.innerWidth < minWidth) {
         table.classList.add('sticky-columns');
@@ -69,6 +69,47 @@ window.addEventListener('DOMContentLoaded', function () {
   
     handleStickyColumns();
     window.addEventListener('resize', handleStickyColumns);
+
+
+    // Add click event listener to each table row
+    const dataTable = document.getElementById('coins-data-table');
+    const tableRows = dataTable.querySelectorAll('tbody tr');
+
+    tableRows.forEach(function (row) {
+        row.addEventListener('click', function (e) {
+            const link = this.querySelector('a');
+            if (link) {
+                window.location.href = link.href;
+            }
+        });
+    });
+
+
+    // Adding th to express labeling for numbers
+    function addRowNumberIndicator(tableId) {
+        const table = document.getElementById(tableId);
+        const headerRow = table.querySelector('thead tr');
+        const th = document.createElement('th');
+        th.textContent = '#';
+        th.classList.add('text-left');
+        headerRow.insertBefore(th, headerRow.firstChild);
+    }
+    addRowNumberIndicator('coins-data-table'); 
+
+
+    // Adding dynamic numbering to table rows
+    function addRowNumbers(tableId) {
+        const table = document.getElementById(tableId);
+        const rows = table.querySelectorAll('tbody tr');
+    
+        rows.forEach((row, index) => {
+            const cell = document.createElement('td');
+            cell.textContent = index + 1;
+            row.insertBefore(cell, row.firstChild);
+        });
+    }
+    addRowNumbers('coins-data-table');
 });
   
+
   
